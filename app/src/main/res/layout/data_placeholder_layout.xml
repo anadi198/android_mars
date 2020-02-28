@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginBottom="20dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/titleplace"
+        android:layout_height="@dimen/placeholderTextHeight"
+        android:background="@color/background" />
+
+    <LinearLayout
+        android:id="@+id/date_scoreplace"
+        android:layout_width="match_parent"
+        android:layout_below="@id/titleplace"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_10"
+        android:weightSum="2">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/activityPadding"
+            android:layout_height="@dimen/placeholderTextHeight"
+            android:background="@color/background" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/activityPadding"
+            android:layout_height="@dimen/placeholderTextHeight"
+            android:background="@color/background" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/desc1"
+        android:layout_below="@id/date_scoreplace"
+        android:layout_height="@dimen/placeholderTextHeight"
+        android:layout_marginTop="@dimen/padding_10"
+        android:background="@color/background" />
+
+    <View
+        android:layout_width="350dp"
+        android:layout_below="@id/desc1"
+        android:id="@+id/desc2"
+        android:layout_height="@dimen/placeholderTextHeight"
+        android:layout_marginTop="8dp"
+        android:background="@color/background" />
+
+    <View
+        android:layout_width="270dp"
+        android:layout_below="@id/desc2"
+        android:layout_height="@dimen/placeholderTextHeight"
+        android:layout_marginTop="8dp"
+        android:background="@color/background" />
+</RelativeLayout>

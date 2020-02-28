@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:contentPadding="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/container">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/libre_franklin"
+            android:gravity="center"
+            android:paddingVertical="8dp"
+            android:text="@string/title"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:transitionName="title" />
+
+        <LinearLayout
+            android:id="@+id/date_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:transitionName="date"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingVertical="8dp"
+                android:text="01-05-1998"
+                android:fontFamily="@font/libre_franklin_light"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:transitionName="score"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:paddingVertical="8dp"
+                android:text="6.55369"
+                android:fontFamily="@font/libre_franklin_light"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_green_dark" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/constraint"
+            android:paddingBottom="16dp"
+            android:layout_below="@id/date_score">
+
+            <TextView
+                android:id="@+id/small_description"
+                android:layout_width="match_parent"
+                android:transitionName="desc"
+                android:layout_height="wrap_content"
+                android:maxLines="6"
+                android:minLines="1"
+                android:text="@string/desc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/libre_franklin_light"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/read_more_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="end"
+                android:text="Read more"
+                android:textColor="@color/text_color"
+                app:layout_constraintBottom_toBottomOf="@id/small_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:fontFamily="@font/libre_franklin_light"
+                android:lineSpacingExtra="5sp"
+                android:textSize="16sp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
